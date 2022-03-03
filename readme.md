@@ -22,7 +22,25 @@ app/dyno.
 4. Create an account with Heroku, create an app for production and an app for development
 5. Create a new repo in Docker hub
 
+<<<<<<< HEAD
 #### Setup Docker and Heroku Credentials In the Repository Settings under Action -> Secret
+=======
+### In the Repository Settings under Action -> Secret
+
+6. Add repository settings for action secrets for DOCKER_USERNAME, DOCKER_PASSWORD, HEROKU_API_KEY (put the appropriate
+   values in)
+
+### In this file .github/workflows/test-build-deploy.yml
+https://jkowal-flask.herokuapp.com/
+6. Change line 45 to have your docker repo address in: .github/workflows/test-build-deploy.yml
+7. change lines 61 to have your heroku app name in: .github/workflows/test-build-deploy.yml
+8. change line 62 to have your heroku email in: .github/workflows/test-build-deploy.yml
+
+9. change line 19 of readme.md (this file) to have the link to your heroku app (click on the app and then there is a
+   button to open the app in the upper right)  This will not work until it successfully deploys
+10. Push your local repo and fix any errors that appear when the workflow is running. You can check the workflow in the
+    actions tab
+>>>>>>> 88d84f05d85ff5c804d3954c3c5643c0c87c0e67
 
 6. In your newly created Github repository, add new repository secrets for DOCKER_USERNAME, DOCKER_PASSWORD, HEROKU_API_KEY (Values are DOCKER_USERNAME: your docker hub username; DOCKER_PASSWORD: your docker hub password; HEROKU_API_KEY: API key from the heroku app)
 ### GitHub Notes:  Set the action secrets repository in: -> settings -> actions -> secrets
@@ -47,7 +65,12 @@ app/dyno.
 .pylintrc is the config for pylint, .coveragerc is the config for coverage and setup.py is a config file for pytest
 
 
+<<<<<<< HEAD
 ### Future Notes and Resources
 * https://flask-user.readthedocs.io/en/latest/basic_app.html
 * https://hackersandslackers.com/flask-application-factory/
 * https://suryasankar.medium.com/a-basic-app-factory-pattern-for-production-ready-websites-using-flask-and-sqlalchemy-dbb891cdf69f
+=======
+# Testing CI/CD #2 
+
+>>>>>>> 88d84f05d85ff5c804d3954c3c5643c0c87c0e67

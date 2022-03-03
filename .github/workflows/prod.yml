@@ -4,8 +4,16 @@ on:
   push:
     branches:
       - 'master'
+      - 'main'
     tags:
       - 'v*'
+<<<<<<< HEAD:.github/workflows/prod.yml
+=======
+  pull_request:
+    branches:
+      - 'master'
+      - 'main'
+>>>>>>> 88d84f05d85ff5c804d3954c3c5643c0c87c0e67:.github/workflows/test-build-deploy.yml
 
 jobs:
   runtest:
@@ -39,7 +47,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: kaw393939/flaskbase
+          images: jk262/is218
 
       - name: Build and push
         uses: docker/build-push-action@v2
@@ -55,6 +63,11 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+<<<<<<< HEAD:.github/workflows/prod.yml
           heroku_app_name: "kwilliam-prod" #Must be unique in Heroku
           heroku_email: "keith@webizly.com"
+=======
+          heroku_app_name: "jkowal-flask" #Must be unique in Heroku
+          heroku_email: "jk262@njit.edu"
+>>>>>>> 88d84f05d85ff5c804d3954c3c5643c0c87c0e67:.github/workflows/test-build-deploy.yml
           usedocker: true
